@@ -355,8 +355,9 @@
   border-radius: 0; /* sin curvas */
 }
 
-.header-comparativas h1 {
-  font-size: 48px;
+.header-comparativas h1,
+.header-comparativas h2 {
+  font-size: 44px;
   font-weight: bold;
   margin: 0;
   text-transform: uppercase;
@@ -373,10 +374,99 @@
   border-radius: 0; /* sin curvas */
 }
 
-.header-comparativas1 h1 {
-  font-size: 48px;
+.header-comparativas1 h1,
+.header-comparativas1 h2 {
+  font-size: 44px;
   font-weight: bold;
-  margin: 0;
+  margin: 0 0 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+.header-comparativas1-desc {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 950px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .header-comparativas h1,
+  .header-comparativas h2,
+  .header-comparativas1 h1,
+  .header-comparativas1 h2 {
+    font-size: 28px;
+  }
+
+  .header-comparativas1-desc {
+    font-size: 16px;
+  }
+}
+
+/* ===== SECCIÓN 4: CTA PRECIOS ===== */
+.cta-precios-section {
+  width: 100%;
+  background: linear-gradient(135deg, #2F3A52 0%, #1e2638 100%);
+  padding: 65px 24px;
+  box-sizing: border-box;
+  text-align: center;
+  border-top: 4px solid #4A9194;
+  border-bottom: 4px solid #4A9194;
+  margin-top: 80px;
+}
+
+.cta-precios-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.cta-precios-texto {
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-precios-btn {
+  display: inline-block;
+  background-color: #4A9194;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 16px 38px;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 20px rgba(74, 145, 148, 0.4);
+  transition: all 0.3s ease;
+}
+
+.cta-precios-btn:hover {
+  background-color: #3b7a7d;
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(74, 145, 148, 0.6);
+}
+
+@media (max-width: 768px) {
+  .cta-precios-section {
+    padding: 40px 16px;
+  }
+  .cta-precios-texto {
+    font-size: 22px;
+  }
+  .cta-precios-btn {
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+}
+

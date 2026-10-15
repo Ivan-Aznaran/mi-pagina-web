@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-beneficios',
@@ -6,7 +7,20 @@ import { Component } from '@angular/core';
   templateUrl: './beneficios.html',
   styleUrls: ['./beneficios.css']
 })
-export class BeneficiosComponent {
+export class BeneficiosComponent implements OnInit {
+  constructor(private titleService: Title, private metaService: Meta) {}
+
+  ngOnInit(): void {
+    this.titleService.setTitle('Soluciones energéticas renovables con beneficios garantizados. Ecoclima 21.');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Conoce nuestras soluciones energéticas renovables con garantía, eficiencia, ahorro y soporte profesional para climatización y aire acondicionado en tu hogar.'
+    });
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'Soluciones energeticas renovables, Eficiencia energética hogar, Ahorro energético vivienda, Climatización y aire acondicionado, Empresa de energia renovable'
+    });
+  }
   beneficios = [
     {
       titulo: 'Ahorro Energético Garantizado',

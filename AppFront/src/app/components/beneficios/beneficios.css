@@ -6,34 +6,46 @@
   margin-top: 55px;
 }
 
-.titulo {
+.header-beneficios-bloque {
   text-align: center;
-  font-size: 50px; /* Más grande */
-  color: #2F3A52;
-  font-weight: 800;
-  margin-bottom: 70px; /* Más espacio con las tarjetas */
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  margin-bottom: 50px;
 }
 
-.titulo1 {
-  text-align: center;
-  font-size: 50px; /* Más grande */
-  color: #2F3A52;
-  font-weight: 800;
-  margin-bottom: 70px; /* Más espacio con las tarjetas */
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.header-beneficios-bloque.seccion3-bloque {
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
+.titulo,
+.titulo1,
 .titulo2 {
   text-align: center;
-  font-size: 50px; /* Más grande */
+  font-size: 38px;
   color: #2F3A52;
   font-weight: 800;
-  margin-bottom: 70px; /* Más espacio con las tarjetas */
+  margin: 0 0 16px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
+  line-height: 1.3;
+}
+
+.beneficios-subtexto {
+  font-size: 20px;
+  color: #3D4B66;
+  max-width: 950px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .titulo,
+  .titulo1,
+  .titulo2 {
+    font-size: 26px;
+  }
+  .beneficios-subtexto {
+    font-size: 16px;
+  }
 }
 .secciones-grid {
   display: grid;

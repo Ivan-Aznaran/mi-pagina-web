@@ -1,8 +1,8 @@
 <div class="nosotros-global">
 
-  <!-- PORTADA -->
+  <!-- PORTADA (SECCIÓN 1) -->
   <section class="nosotros-portada">
-    <h1>Climatización y aire acondicionado</h1>
+    <h1>Somos tu empresa de aires acondicionados y energía renovable de confianza</h1>
     <p>
       En Ecoclima trabajamos con tecnología de vanguardia para brindarte soluciones sostenibles en climatización y energía renovable.
       Ya sea en tu hogar o empresa, somos tu aliado en confort y eficiencia energética.
@@ -24,9 +24,9 @@
 
   <div class="espacio-transparente"></div>
 
-  <!-- CONTENIDO CON BLOQUES E IMAGEN -->
-   <section class="nosotros-portada1">
-    <h1>Instalaciones de aire acondicionado en madrid</h1>
+  <!-- CONTENIDO CON BLOQUES E IMAGEN (SECCIÓN 2) -->
+  <section class="nosotros-portada1">
+    <h2>Comprometidos con la sostenibilidad, la eficiencia y tu confianza</h2>
   </section>
   <div class="nosotros-bloques-con-imagen">
     
@@ -72,6 +72,144 @@
 
     <div class="imagen-lateral"></div>
   </div>
+
+  <!-- SECCIÓN 3: PREGUNTAS FRECUENTES -->
+  <div class="faq-nosotros-container">
+    <section class="faq-nosotros-section">
+      <h2 class="faq-nosotros-titulo">Preguntas Frecuentes</h2>
+
+      <div class="faq-nosotros-accordion">
+
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-summary" type="button" (click)="toggleFaq(0)">
+            <span class="faq-icon" aria-hidden="true">{{ isFaqOpen(0) ? '−' : '+' }}</span>
+            <span class="faq-pregunta">¿Qué servicios ofrece vuestra empresa de climatización y aire acondicionado?</span>
+          </button>
+          <div class="faq-content" [class.open]="isFaqOpen(0)">
+            <div class="faq-content-inner">
+              <p>
+                Nuestra empresa ofrece soluciones integrales en climatización y aire acondicionado, que incluyen asesoramiento técnico, instalación profesional y mantenimiento preventivo. Trabajamos con marcas líderes para garantizar calidad, bajo consumo y durabilidad en cada proyecto.
+              </p>
+              <p>
+                Nos especializamos en hogares, oficinas y naves industriales, adaptando cada instalación a las necesidades reales del cliente. Además, brindamos soporte técnico postventa, revisiones periódicas y optimización del rendimiento energético.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-summary" type="button" (click)="toggleFaq(1)">
+            <span class="faq-icon" aria-hidden="true">{{ isFaqOpen(1) ? '−' : '+' }}</span>
+            <span class="faq-pregunta">¿Realizáis instalaciones de aire acondicionado en Madrid y alrededores?</span>
+          </button>
+          <div class="faq-content" [class.open]="isFaqOpen(1)">
+            <div class="faq-content-inner">
+              <p>
+                Sí, realizamos instalaciones de aire acondicionado en Madrid, incluyendo Fuenlabrada, Leganés, Getafe y otras zonas de la Comunidad. Nos desplazamos sin compromiso para realizar un diagnóstico técnico del espacio.
+              </p>
+              <p>
+                El servicio incluye instalación completa, conexión eléctrica, puesta en marcha y asesoramiento personalizado. Garantizamos una climatización eficiente y adaptada a cada tipo de inmueble, ya sea residencial, comercial o industrial.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-summary" type="button" (click)="toggleFaq(2)">
+            <span class="faq-icon" aria-hidden="true">{{ isFaqOpen(2) ? '−' : '+' }}</span>
+            <span class="faq-pregunta">¿Qué os diferencia como instaladores de aire acondicionado en Madrid?</span>
+          </button>
+          <div class="faq-content" [class.open]="isFaqOpen(2)">
+            <div class="faq-content-inner">
+              <p>
+                Como instaladores de aire acondicionado en Madrid, destacamos por ofrecer atención directa, presupuestos personalizados y cumplimiento estricto de normativas. Nuestros técnicos están certificados y actualizados en las últimas tecnologías.
+              </p>
+              <p>
+                Apostamos por la eficiencia energética y la sostenibilidad. Nuestro enfoque no solo es técnico, sino también consultivo, ayudando a nuestros clientes a elegir el sistema que les aporte mayor confort y ahorro a largo plazo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-summary" type="button" (click)="toggleFaq(3)">
+            <span class="faq-icon" aria-hidden="true">{{ isFaqOpen(3) ? '−' : '+' }}</span>
+            <span class="faq-pregunta">¿Qué incluye el servicio de instalación climatización Madrid?</span>
+          </button>
+          <div class="faq-content" [class.open]="isFaqOpen(3)">
+            <div class="faq-content-inner">
+              <p>
+                Nuestro servicio de instalación climatización Madrid incluye visita técnica, diseño del sistema, elección de equipos, instalación completa y configuración del sistema de control. Todo se adapta al tamaño y uso del espacio.
+              </p>
+              <p>
+                Trabajamos tanto con splits individuales como con sistemas centralizados e inverter. Además, asesoramos sobre subvenciones y mejoras para hacer la instalación más rentable y eficiente desde el primer día.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-summary" type="button" (click)="toggleFaq(4)">
+            <span class="faq-icon" aria-hidden="true">{{ isFaqOpen(4) ? '−' : '+' }}</span>
+            <span class="faq-pregunta">¿Ofrecéis mantenimiento para sistemas de climatización y aire acondicionado?</span>
+          </button>
+          <div class="faq-content" [class.open]="isFaqOpen(4)">
+            <div class="faq-content-inner">
+              <p>
+                Sí, ofrecemos mantenimiento integral para todos los sistemas de climatización y aire acondicionado que instalamos. Esto incluye limpieza, revisión de filtros, chequeo de gas refrigerante y control de eficiencia.
+              </p>
+              <p>
+                Nuestro servicio asegura que los equipos funcionen al máximo rendimiento todo el año. Así prevenimos averías, extendemos su vida útil y reducimos el consumo energético. También damos soporte técnico en caso de incidencias.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button class="faq-summary" type="button" (click)="toggleFaq(5)">
+            <span class="faq-icon" aria-hidden="true">{{ isFaqOpen(5) ? '−' : '+' }}</span>
+            <span class="faq-pregunta">¿Es posible combinar aire acondicionado con energía renovable?</span>
+          </button>
+          <div class="faq-content" [class.open]="isFaqOpen(5)">
+            <div class="faq-content-inner">
+              <p>
+                Por supuesto. Combinamos sistemas de aire acondicionado con energía renovable, especialmente con instalaciones solares o aerotermia. Esta sinergia permite reducir el impacto ambiental y maximizar el ahorro energético.
+              </p>
+              <p>
+                Diseñamos soluciones híbridas adaptadas a viviendas, oficinas o locales comerciales. Así los clientes no solo climatizan su espacio, sino que también lo hacen de forma eficiente, sostenible y con menor coste a largo plazo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+          <button class="faq-summary" type="button" (click)="toggleFaq(6)">
+            <span class="faq-icon" aria-hidden="true">{{ isFaqOpen(6) ? '−' : '+' }}</span>
+            <span class="faq-pregunta">¿Qué marcas utilizáis en vuestras instalaciones?</span>
+          </button>
+          <div class="faq-content" [class.open]="isFaqOpen(6)">
+            <div class="faq-content-inner">
+              <p>
+                Trabajamos con marcas reconocidas del sector como Mitsubishi, Daikin, Fujitsu o LG, garantizando tecnología avanzada y eficiencia. Seleccionamos cada equipo según las necesidades y presupuesto del cliente.
+              </p>
+              <p>
+                Esto asegura compatibilidad con sistemas de domótica, bajo nivel sonoro, alto rendimiento y garantía oficial. Elegimos solo proveedores con servicio técnico disponible en España para mayor tranquilidad del usuario.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
 </div>
 
 <div class="espacio-transparente"></div>
@@ -82,3 +220,14 @@
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3044.2966517199593!2d-3.7440952999999997!3d40.26916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6edc8bae3b2d43f%3A0x32f1cb94dc434bd9!2sEcoClima21-Solutions!5e0!3m2!1ses!2ses!4v1754128391754!5m2!1ses!2ses"
     width="1700" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
+
+<!-- SECCIÓN 4: CTA ENLAZADO A /PRECIOS -->
+<div class="cta-nosotros-section">
+  <div class="cta-nosotros-container">
+    <h2 class="cta-nosotros-texto">
+      Descubre cuánto puedes ahorrar con nuestras tarifas personalizadas de climatización.
+    </h2>
+    <a routerLink="/precios" class="cta-nosotros-btn">VER TARIFAS Y PRECIOS</a>
+  </div>
+</div>
+

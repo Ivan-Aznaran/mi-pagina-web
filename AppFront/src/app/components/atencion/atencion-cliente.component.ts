@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-atencion-cliente',
@@ -8,13 +9,29 @@ import { NgForm } from '@angular/forms';
   standalone: false,
   styleUrls: ['./atencion-cliente.component.css']
 })
-export class AtencionClienteComponent {
+export class AtencionClienteComponent implements OnInit {
   exito = false;
   email = '';
   confirmarEmail = '';
   mensajeTexto = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private titleService: Title,
+    private metaService: Meta
+  ) {}
+
+  ngOnInit(): void {
+    this.titleService.setTitle('Atención directa de empresa de energía renovable en tu ciudad. Ecoclima 21.');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Contacta con nuestra empresa de energía renovable y resuelve tus dudas sobre climatización, aerotermia o instalaciones. Te ayudamos rápido y sin compromiso.'
+    });
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'Empresa de energia renovable, Aerotermia sevilla, Climatización cádiz, Instalacion aerotermia piso, Sistemas de aerotermia'
+    });
+  }
 
   get mensajeInvalido(): boolean {
     const palabras = this.mensajeTexto.trim().split(/\s+/);

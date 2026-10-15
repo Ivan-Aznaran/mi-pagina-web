@@ -1,5 +1,6 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { Title as BrowserTitle, Meta } from '@angular/platform-browser';
 import { Chart, ChartConfiguration, LineController, LineElement, PointElement, LinearScale, Title, CategoryScale, Tooltip, Legend } from 'chart.js';
 
 // Registrar los elementos que vamos a usar
@@ -11,11 +12,27 @@ Chart.register(LineController, LineElement, PointElement, LinearScale, CategoryS
   standalone: false,
   styleUrls: ['./precios.component.css']
 })
-export class PreciosComponent implements AfterViewInit {
+export class PreciosComponent implements OnInit, AfterViewInit {
   @ViewChild('graficaAire') graficaAire!: ElementRef<HTMLCanvasElement>;
   @ViewChild('graficaCalefaccion') graficaCalefaccion!: ElementRef<HTMLCanvasElement>;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private titleService: BrowserTitle,
+    private metaService: Meta
+  ) {}
+
+  ngOnInit(): void {
+    this.titleService.setTitle('Compañía energía renovable con equipos de climatización eficientes.');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Compañía energía renovable que ofrece aire acondicionado, calefacción y aerotermia con equipos de bajo consumo y alta eficiencia para viviendas y negocios.'
+    });
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'Compañia energia renovable, Ahorro energético vivienda, Eficiencia energética hogar, Calefacción por aerotermia, Calderas de aerotermia'
+    });
+  }
 
   irARegistro(plan: string) {
     this.router.navigate(['/registro'], { queryParams: { plan } });
